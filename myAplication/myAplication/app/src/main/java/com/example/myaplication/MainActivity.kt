@@ -64,13 +64,13 @@ fun encabezadoLogin(modifier: Modifier = Modifier) {
         )
         Spacer(modifier = Modifier.height(20.dp))
         Text(
-            text = "Estudiante#1",
+            text = "Joseph Grant",
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold
         )
         Spacer(modifier = Modifier.height(10.dp))
         Text(
-            text = "Estudiante#2",
+            text = "Bryan Archbold",
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
         )
