@@ -101,9 +101,9 @@ fun encabezadoLogin(modifier: Modifier = Modifier) {
         Button(
             onClick = {
                 if (nota.isNotBlank()) {
-                    val resultado = validarNota(nota) // Llama a la función de lógica
-                    mensajeValidacion = resultado // Actualiza el estado con el resultado
-                    Toast.makeText(contexto, resultado, Toast.LENGTH_LONG).show() // Muestra el Toast aquí
+                    val resultado = validarNota(nota) 
+                    mensajeValidacion = resultado
+                    Toast.makeText(contexto, resultado, Toast.LENGTH_LONG).show()
                 } else {
                     val errorMessage = "Ingrese una nota correcta"
                     Toast.makeText(contexto, errorMessage, Toast.LENGTH_LONG).show()
@@ -115,7 +115,6 @@ fun encabezadoLogin(modifier: Modifier = Modifier) {
             Text(text = "Validar Nota")
         }
 
-        // Puedes mostrar el mensaje de validación en la UI si lo deseas
         mensajeValidacion?.let {
             Spacer(modifier = Modifier.height(10.dp))
             Text(text = it)
@@ -123,7 +122,6 @@ fun encabezadoLogin(modifier: Modifier = Modifier) {
     }
 }
 
-// Esta función ahora solo contiene la lógica de validación y devuelve un String
 fun validarNota(notaString: String): String {
     val nota = notaString.toIntOrNull()
     return when {
